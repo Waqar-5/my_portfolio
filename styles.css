@@ -1,0 +1,208 @@
+
+  /* <!-- Smooth Scroll CSS --> */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+body {
+  padding-top: 70px;
+}
+
+/* 🔥 Brand/logo hover glow + bounce */
+.navbar .navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1E40AF !important;
+  transition: all 0.4s ease;
+}
+
+.navbar .navbar-brand:hover {
+  color: #5b8bce !important;
+  text-shadow: 0 0 10px lighten(#1E40AF, 25%);
+  transform: scale(1.05) translateY(-3px);
+}
+
+/* ✨ Link underline animation */
+.navbar .nav-link {
+  position: relative;
+  font-weight: 600;
+  color: #1E40AF !important;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #cad808;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  width: 100%;
+  transition: all 0.5 ease-in-out;
+}
+
+.navbar .nav-link:hover{
+   transform: scale(1.05) translateY(-3px);
+}
+
+/* 🎈 Dropdown fade-in effect */
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+  margin-top: 0.5rem;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* 🌀 Animate whole navbar slide-down on load */
+.navbar {
+  animation: navbarFadeIn 0.8s ease-in-out;
+}
+
+@keyframes navbarFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.mynav {
+  background-image: url("https://th.bing.com/th/id/OIP.G0M-ojEeyEwbNe6A03GMnwHaEo?w=2560&h=1600&rs=1&pid=ImgDetMain");
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.navbar-brand img{
+  width: 50px;
+  border: none;
+  border-radius: 55%;
+}
+
+
+
+/* main section */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center center/cover;
+  /* background: url('./assets/PIC_of_mine.jpg') no-repeat center center/contain; */
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.hero h1 span {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+p{
+   animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #1E40AF, 0 0 20px #1E40AF;
+  }
+  to {
+    text-shadow: 0 0 20px #64748B, 0 0 30px #64748B;
+  }
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the text is hidden until revealed */
+  border-right: 2px solid #1442d8; /* The cursor */
+  white-space: nowrap;
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+  font-weight: 500;
+  font-size: 1.25rem;
+ 
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+
+
+/* skill section */ 
+ /* Fade-in animation for skill boxes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .skill-box {
+    animation: fadeInUp 0.8s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .skill-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(30, 64, 175, 0.4);
+    transition: all 0.5 ease-in-out;
+  }
+
+  .skill-box:hover .overlay {
+    background-color: rgba(30, 64, 175, 0.85) !important;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Different overlay colors on hover for each box */
+  .skill-box:nth-child(1):hover .overlay {
+    background-color: rgba(30, 64, 175, 0.85);
+  }
+  .skill-box:nth-child(2):hover .overlay {
+    background-color: rgba(100, 116, 139, 0.85);
+  }
+  .skill-box:nth-child(3):hover .overlay {
+    background-color: rgba(255, 193, 7, 0.85);
+  }
+  .skill-box:nth-child(4):hover .overlay {
+    background-color: rgba(53, 131, 196, 0.85);
+  }
+
+
+
+
+
+  /* contact section */
+
+  
