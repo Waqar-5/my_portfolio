@@ -42,55 +42,6 @@ function type() {
 type();
 
 
-
-
-//   // 🔐 Encoded Formspree ID
-// const encodedID = "bXFhZ3ZuYXA="; // Your encoded 'mqagvnap'
-// const formID = atob(encodedID);
-// const formURL = `https://formspree.io/f/${formID}`;
-
-// document.getElementById("contact-form").addEventListener("submit", async function (e) {
-//   e.preventDefault();
-//   const formData = new FormData(this);
-
-//   // Show sending alert
-//   Swal.fire({
-//     title: "Sending...",
-//     text: "Please wait while your message is being sent.",
-//     icon: "info",
-//     showConfirmButton: false,
-//     background: "#f0f0f0",
-//     color: "#333"
-//   });
-
-//   // Send the form data to Formspree
-//   const response = await fetch(formURL, {
-//     method: "POST",
-//     body: formData,
-//     headers: { Accept: "application/json" }
-//   });
-
-//   if (response.ok) {
-//     Swal.fire({
-//       title: "✅ Message Sent!",
-//       text: "Thank you for reaching out. I'll get back to you soon!",
-//       icon: "success",
-//       background: "#f0f0f0",
-//       color: "#333"
-//     });
-//     this.reset(); // Clear the form
-//   } else {
-//     Swal.fire({
-//       title: "❌ Error!",
-//       text: "Something went wrong. Please try again later.",
-//       icon: "error",
-//       background: "#f0f0f0",
-//       color: "#333"
-//     });
-//   }
-// });
-
-
 document.getElementById("contact-form").addEventListener("submit", async function(e) {
   e.preventDefault();
   
@@ -98,7 +49,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   const body = new URLSearchParams(formData).toString(); // send x-www-form-urlencoded
 
   try {
-    const response = await fetch("/.netlify/functions/contact", {
+    const response = await fetch("./netlify/functions/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body
