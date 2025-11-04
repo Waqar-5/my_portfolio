@@ -52,7 +52,7 @@
 
 
   <!-- Hero Section -->
-  <section class="hero text-center d-flex align-items-center justify-content-center" style="height: 100vh;">
+  <!-- <section class="hero text-center d-flex align-items-center justify-content-center" style="height: 100vh;">
     <div class="container">
       <h1 class="display-4 fw-bold">
         Hi, I'm <span class="text-primary">Waqar, </span>
@@ -60,11 +60,50 @@
       </h1>
       <a href="#projects" class="btn btn-primary btn-lg mt-3">View My Projects</a>
     </div>
-  </section>
+  </section> -->
 
 
+ <section class="hero d-flex align-items-center" style="
+    height: 100vh;
+    /* background: url('./assets/hero-bg.jpg') center/cover no-repeat; */
+    background-color: #75c0ca;
+    position: relative;
+    overflow: hidden;
+">
+  <!-- Overlay -->
+  <div style="
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.3);
+      z-index: 1;
+  "></div>
 
+  <div class="container h-100" style="position: relative; z-index: 2;">
+    <div class="row h-100 align-items-center">
 
+      <!-- Left Side -->
+      <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
+        <h1 class="display-4 fw-bold text-white">
+          Hi, I'm <span class="text-primary">Waqar, </span>
+          <span class="typewriter-js text-warning"></span>
+        </h1>
+        <p class="lead mt-3 text-white">I build beautiful websites and interactive experiences.</p>
+        <a href="#projects" class="btn btn-primary btn-lg mt-3">View My Projects</a>
+      </div>
+
+      <!-- Right Side: VIP Image -->
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+        <div class="vip-container">
+          <img src="./assets/my_image.jpeg" alt="Waqar Ali" class="vip-img">
+          <div class="neon-trail"></div>
+          <div class="neon-trail second"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
   <!-- About Section -->
