@@ -49,7 +49,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   const body = new URLSearchParams(formData).toString(); // x-www-form-urlencoded
 
   try {
-    const response = await fetch("/.netlify/functions/contact.js", {
+    const response = await fetch("/.netlify/functions/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body
