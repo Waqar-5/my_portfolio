@@ -283,3 +283,114 @@ p{
   /* contact section */
 
   
+
+   body {
+      background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    #skills h2 {
+      font-weight: 800;
+      color: #3b82f6;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .skill-card {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      height: 200px;
+      cursor: pointer;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease, box-shadow 0.3s ease;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .skill-card:hover {
+      transform: rotateY(15deg) rotateX(5deg) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .skill-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease, filter 0.5s ease;
+      border-radius: 1rem;
+    }
+
+    .skill-card:hover img {
+      transform: scale(1.1) rotateZ(3deg);
+      filter: brightness(1.2);
+    }
+
+    .overlay {
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      text-align: center;
+      padding: 10px;
+      border-radius: 1rem;
+      transform: translateY(20px);
+    }
+
+    .skill-card:hover .overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .progress {
+      width: 70%;
+      height: 8px;
+      border-radius: 4px;
+      background-color: rgba(255,255,255,0.3);
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #6366f1);
+      width: 0;
+      transition: width 1.5s ease-in-out;
+      border-radius: 4px;
+    }
+
+    .skill-card:hover .progress-bar {
+      width: var(--skill-level);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+      background-size: 100%, 100%;
+    }
+
+    .carousel-item {
+      padding: 1rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .skill-card {
+        height: 180px;
+      }
+    }
