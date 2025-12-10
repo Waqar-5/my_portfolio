@@ -1,6 +1,27 @@
 
   /* <!-- Smooth Scroll CSS --> */
 
+
+
+  /* ===============================
+   Define CSS variable for navbar height
+   This makes it easy to update later if navbar height changes
+   =============================== */
+:root {
+  --navbar-height: 30px; /* actual height of your navbar */
+}
+
+/* ===============================
+   Add scroll margin to sections
+   Ensures sections are fully visible below the fixed navbar
+   when using anchor links (#about, #skills, etc.)
+   calc(var(--navbar-height) + 10px) adds 10px extra spacing
+   =============================== */
+section {
+  scroll-margin-top: calc(var(--navbar-height) + 10px);
+}
+
+
     html {
       scroll-behavior: smooth;
     }
@@ -8,6 +29,10 @@
 
 body {
   padding-top: 70px;
+    background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      
 }
 
 /* 🔥 Brand/logo hover glow + bounce */
@@ -284,12 +309,6 @@ p{
 
   
 
-   body {
-      background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-    }
-
     #skills h2 {
       font-weight: 800;
       color: #3b82f6;
@@ -394,3 +413,9 @@ p{
         height: 180px;
       }
     }
+
+
+
+
+
+    

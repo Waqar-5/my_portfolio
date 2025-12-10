@@ -41,6 +41,51 @@ function type() {
 }
 type();
 
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const typewriterElement = document.querySelector('.typewriter-js');
+//   const texts = [
+//     "Web Developer & UI Enthusiast.",
+//     "Crafting smooth, responsive websites.",
+//     "Turning ideas into interactive reality.",
+//     "Driven by creativity and clean code."
+//   ];
+//   let index = 0;
+//   let charIndex = 0;
+//   let currentText = '';
+//   let isDeleting = false;
+//   let delay = 100;
+
+//   function type() {
+//     if (index >= texts.length) index = 0;
+//     currentText = texts[index];
+
+//     if (!isDeleting) {
+//       typewriterElement.textContent = currentText.substring(0, charIndex + 1);
+//       charIndex++;
+//       if (charIndex === currentText.length) {
+//         isDeleting = true;
+//         delay = 1500;
+//       } else {
+//         delay = 100;
+//       }
+//     } else {
+//       typewriterElement.textContent = currentText.substring(0, charIndex - 1);
+//       charIndex--;
+//       if (charIndex === 0) {
+//         isDeleting = false;
+//         index++;
+//         delay = 500;
+//       } else {
+//         delay = 50;
+//       }
+//     }
+
+//     setTimeout(type, delay);
+//   }
+//   type();
+// });
+
 // Contact form submission
 document.getElementById("contact-form").addEventListener("submit", async function(e) {
   e.preventDefault();
@@ -90,6 +135,9 @@ document.getElementById("contact-form").addEventListener("submit", async functio
 
 
 
+
+
+
 // skills
   const skills = [
   { name: "HTML", img: "./assets/html.webp", level: 95 },
@@ -102,7 +150,8 @@ document.getElementById("contact-form").addEventListener("submit", async functio
 
   { name: "Python", img: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png", level: 80 },
   { name: "OpenAI Agents SDK", img: "https://tse2.mm.bing.net/th/id/OIP.QQMzuDuw-Ed49NkYNr905QHaEW?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3", level: 60 },
-  // { name: "Node.js", img: "https://cdn-icons-png.flaticon.com/512/919/919825.png", level: 65 }
+  { name: "Spec-Driven-Developement", img: "https://tse1.mm.bing.net/th/id/OIP.zl23Xs8pPPve3wlp6rtKQAHaEN?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3", level: 50 },
+  { name: "Git", img: "https://cdn.dribbble.com/users/5915602/screenshots/16871115/media/30c4959bc790797c6c3e3701da6adcb6.png?compress=1&resize=400x300&vertical=top", level: 50 }
 ];
 
 
@@ -136,3 +185,5 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     slideDiv.innerHTML = innerHTML;
     carouselContent.appendChild(slideDiv);
   }
+
+
