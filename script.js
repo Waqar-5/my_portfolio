@@ -187,3 +187,62 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   }
 
 
+
+
+// Animate filtering with smooth slide-down + fade
+function filterCategory(category) {
+  const cards = document.querySelectorAll('.project-card');
+  
+  cards.forEach((card, index) => {
+    // Hide all cards first
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(-20px)';
+    card.style.transition = 'all 0.5s ease';
+  });
+
+  // Small timeout to allow "hide" animation
+  setTimeout(() => {
+    cards.forEach((card, index) => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.style.display = 'block';
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 100); // stagger animation for better effect
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }, 200);
+
+  // Active button highlight
+  document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+
+
+// //   // categories
+// //   const categoryButtons = document.querySelectorAll('.category-btn');
+
+// // categoryButtons.forEach(btn => {
+// //   btn.addEventListener('click', () => {
+// //     categoryButtons.forEach(b => b.classList.remove('active'));
+// //     btn.classList.add('active');
+// // Highlight active button
+// const buttons = document.querySelectorAll(".category-btn");
+// buttons.forEach(btn => {
+//   btn.addEventListener("click", () => {
+//     buttons.forEach(b => b.classList.remove("active"));
+//     btn.classList.add("active");
+
+
+//     // Optional: call function to filter projects by category
+//     const category = btn.getAttribute('data-category');
+//     filterProjects(category);
+//   });
+// });
+
+// function filterProjects(category) {
+//   // Implement project filtering here
+// }

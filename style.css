@@ -415,7 +415,47 @@ p{
     }
 
 
+/* Category Buttons */
+.category-btn {
+  border-radius: 50px;
+  margin: 0.3rem;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple-blue gradient */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
 
+.category-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
 
+.category-btn.active {
+  background: linear-gradient(135deg, #ff6a00, #ee0979); /* Orange-pink gradient for active */
+  color: #fff;
+}
 
-    
+/* Project Card Animation */
+.project-card {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+}
+
+/* Card Hover */
+.project-card .card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+/* Card Title Gradient */
+.card-title {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
