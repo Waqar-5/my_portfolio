@@ -3,6 +3,9 @@ function redirectCategory(category) {
     case "all":
       window.location.href = "categories/categories_all.html";
       break;
+       case "Little advanced":
+      window.location.href = "/categories_simple_advanced.html";
+      break;
     case "simple":
       window.location.href = "categories/categories_simple.html";
       break;
