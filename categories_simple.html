@@ -3,47 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Projects</title>
-  <link rel="stylesheet" href="categories_simple.css">
+  <title>All Simple with both little advanced Projects</title>
+  
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./categories_simple.css">
 </head>
 <body>
 
-<div class="container my-5">
-  <h1 class="text-center mb-5">Simple Projects</h1>
-  
-  <div class="row g-4">
 
-    <!-- Neon Calculator -->
-    <div class="col-md-4 project-card">
-      <div class="card h-100 shadow-sm">
-        <img src="./assets/calculator.png" class="card-img-top" alt="Neon Calculator Project">
-        <div class="card-body">
-          <h5 class="card-title">A Neon Calculator</h5>
-          <p class="card-text">A clean, modern calculator built with HTML, CSS, and JS.</p>
-          <a href="https://waqar-5.github.io/Simple-Calculator-Using--JS-HTML-CSS/" class="btn btn-outline-primary btn-sm" target="_blank">View Project</a>
-        </div>
+    <!-- Navbar -->
+<div class="mynav">
+  <nav class="navbar navbar-expand-lg navbar-light mynav fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://th.bing.com/th/id/OIP.FIb-C6-HZWHwNgr4pGVYKgHaE8?rs=1&pid=ImgDetMain" width="30px" alt=""/>
+        Waqar Dev
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        </ul>
       </div>
     </div>
-
-    <!-- Add other simple projects below in same format -->
-    <!-- Example placeholder -->
-    <!--
-    <div class="col-md-4 project-card">
-      <div class="card h-100 shadow-sm">
-        <img src="./assets/project-image.png" class="card-img-top" alt="Project Name">
-        <div class="card-body">
-          <h5 class="card-title">Project Name</h5>
-          <p class="card-text">Project description...</p>
-          <a href="PROJECT_LINK" class="btn btn-outline-primary btn-sm" target="_blank">View Project</a>
-        </div>
-      </div>
-    </div>
-    -->
-
-  </div>
+  </nav>
 </div>
 
+
+
+
+<!-- Header -->
+<header class="py-5 text-center bg-primary text-white">
+  <h1 class="display-5 fw-bold">Simple and little advanced Projects</h1>
+  <p class="lead">Explore my amazing Simple and little advanced projects built with Python, and streamlit and so on.</p>
+</header>
+
+
+<!-- Projects Section -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+      <!-- Unit Convertor App -->
+      <div class="col project-card">
+        <div class="card h-100 shadow project-hover">
+          <img src="./assets/unitconvertor.png" class="card-img-top" alt="Simple Unit Convertor Project">
+          <div class="card-body">
+            <h5 class="card-title">A Simple unit convertor</h5>
+            <p class="card-text">A Simple Unit Convertor app built with Python and Streamlit.</p>
+            <a href="https://fileconvertapp-khmdn3rnyy97xyvqxsb4qx.streamlit.app/" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+
+
+          <!--  
+       Secure Data Encryption System (SDES) App -->
+      <div class="col project-card">
+        <div class="card h-100 shadow project-hover">
+          <img src="/assets/SDES.png" class="card-img-top" alt="Secure Data Encryption System (SDES) Project">
+          <div class="card-body">
+            <h5 class="card-title">Secure Data Encryption System (SDES)</h5>
+            <p class="card-text">A Secure Data Encryption System (SDES) app built with Python and Streamlit.</p>
+            <a href="https://assignment-05-8gpbgzbhkevpddgirektyk.streamlit.app/" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+    
+
+
+          <!-- File Converter & Cleaner -->
+      <div class="col project-card">
+        <div class="card h-100 shadow project-hover">
+          <img src="/assets/fileconvertor.png" class="card-img-top" alt="File Converter & Cleaner Project">
+          <div class="card-body">
+            <h5 class="card-title">File Converter & Cleaner</h5>
+            <p class="card-text">A File Converter & Cleaner app built with Python and Streamlit.</p>
+            <a href="https://assign-1-file-converter-app.streamlit.app/" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Money Making Machine -->
+      <div class="col project-card">
+        <div class="card h-100 shadow project-hover">
+          <img src="/assets/machine.png" class="card-img-top" alt="Money Making Machine Project">
+          <div class="card-body">
+            <h5 class="card-title">Money Making Machine</h5>
+            <p class="card-text">A Money Making Machine app built with Python and Streamlit.</p>
+            <a href="https://money-making-machine-project-5.streamlit.app/" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- Mood Tracker -->
+      <div class="col project-card">
+        <div class="card h-100 shadow project-hover">
+          <img src="/assets/moodtracker.png" class="card-img-top" alt="Mood Tracker Project">
+          <div class="card-body">
+            <h5 class="card-title">Mood Tracker</h5>
+            <p class="card-text">A Mood Tracker App built with Python and Streamlit.</p>
+            <a href="https://mood-tracker-7.streamlit.app/" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 🌏 Time Zone App -->
+      <div class="col project-card">
+        <div class="card h-100 shadow project-hover">
+          <img src="/assets/timezoneapp.png" class="card-img-top" alt="Time Zone App Project">
+          <div class="card-body">
+            <h5 class="card-title">Time Zone App</h5>
+            <p class="card-text">A Time Zone App built with Python and Streamlit.</p>
+            <a href="https://time-zone-app-project-6.streamlit.app/" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      
+     <!-- Simple Streamlit App -->
+      <div class="col project-card">
+        <div class="card h-100 shadow project-hover">
+          <img src="/assets/simplestreamlit.png" class="card-img-top" alt="Simple Streamlit App Project">
+          <div class="card-body">
+            <h5 class="card-title">Simple Streamlit App</h5>
+            <p class="card-text">A Simple Streamlit App built with Python and Streamlit.</p>
+            <a href="https://projectsramadancodingnightspython-ujuankef4hlpgsghmsovxz.streamlit.app/" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+
+</section>
+
+
+
+<!-- Footer -->
+<footer class="bg-dark text-light pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <!-- About / Logo -->
+      <div class="col-md-4 mb-4">
+        <h4 class="mb-3 text-primary fw-bold">Waqar Ali</h4>
+        <p class="small text-muted">
+          Crafting elegant digital experiences with passion and precision. Let’s build something amazing together.
+        </p>
+        <div>
+          <a href="https://www.linkedin.com/in/waqar-ali-997b962b5/" target="_blank" class="text-light me-3 fs-5">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Waqar-5" target="_blank" class="text-light me-3 fs-5">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:wa5134810@gmail.com" class="text-light fs-5">
+            <i class="fas fa-envelope me-2"></i> 
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 mb-4">
+        <h5 class="text-white mb-3">Quick Links</h5>
+        <ul class="list-unstyled small">
+          <li><a href="#about" class="text-muted text-decoration-none">About Me</a></li>
+          <li><a href="#projects" class="text-muted text-decoration-none">Projects</a></li>
+          <li><a href="#skills" class="text-muted text-decoration-none">Skills</a></li>
+          <li><a href="#contact" class="text-muted text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="col-md-2 mb-4">
+        <h5 class="text-white mb-3">Services</h5>
+        <ul class="list-unstyled small">
+          <li><a href="#" class="text-muted text-decoration-none">Web Development</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">UI/UX Design</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">Consulting</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">SEO Optimization</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-white mb-3">Contact</h5>
+        <p class="small text-muted mb-1"><i class="fas fa-map-marker-alt me-2"></i> Karachi, Pakistan</p>
+        <p class="small text-muted mb-1"><i class="fas fa-phone me-2"></i> +92 3473861575</p>
+        <p class="small text-muted"><i class="fas fa-envelope me-2"></i> waqar.dev@example.com</p>
+      </div>
+    </div>
+
+    <hr class="border-secondary" />
+
+    <div class="text-center small text-muted">
+      &copy; 2025 Waqar Ali. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
 <script src="categories_simple.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

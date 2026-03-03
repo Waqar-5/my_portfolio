@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: #f9f9f9;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -27,4 +27,369 @@ h1 {
 
 .btn-outline-primary {
   font-size: 0.8rem;
+} */
+
+
+
+/* General Body & Font */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease forwards;
+}
+
+header p {
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Animations for Header */
+@keyframes fadeInDown {
+  0% {opacity: 0; transform: translateY(-30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+/* Project Card Grid */
+.project-card {
+  perspective: 1000px; /* Projection effect */
+}
+
+.project-card .card {
+  border-radius: 20px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  position: relative;
+  background: white;
+}
+
+/* Projectional Hover */
+.project-card .card:hover {
+  transform: rotateY(5deg) rotateX(5deg) translateY(-15px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+}
+
+/* Smooth Image Overlay Animation */
+.project-card .card img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.project-card .card:hover img {
+  transform: scale(1.1) rotate(1deg);
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Card Content Animation */
+.card-body {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1;
+}
+
+.project-card .card:hover .card-body {
+  transform: translateY(-10px);
+}
+
+/* Titles and Text */
+.card-title {
+  font-weight: 700;
+  color: #007bff;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.project-card .card:hover .card-title {
+  color: #ff6a00;
+}
+
+.card-text {
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.project-card .card:hover .card-text {
+  color: #222;
+}
+
+/* Buttons */
+.btn-primary {
+  border-radius: 25px;
+  transition: all 0.4s ease;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  border-color: transparent;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Special Backgrounds */
+.bloktopia-img {
+  background: #000;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+}
+
+.noon-img {
+  background: #fcd900;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Fade-in Animation for Cards */
+.project-card {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInCard 0.8s forwards;
+}
+
+.project-card:nth-child(1) {animation-delay: 0.1s;}
+.project-card:nth-child(2) {animation-delay: 0.2s;}
+.project-card:nth-child(3) {animation-delay: 0.3s;}
+.project-card:nth-child(4) {animation-delay: 0.4s;}
+.project-card:nth-child(5) {animation-delay: 0.5s;}
+.project-card:nth-child(6) {animation-delay: 0.6s;}
+.project-card:nth-child(7) {animation-delay: 0.7s;}
+.project-card:nth-child(8) {animation-delay: 0.8s;}
+.project-card:nth-child(9) {animation-delay: 0.9s;}
+.project-card:nth-child(10){animation-delay: 1s;}
+.project-card:nth-child(11){animation-delay: 1.1s;}
+.project-card:nth-child(12){animation-delay: 1.2s;}
+.project-card:nth-child(13){animation-delay: 1.3s;}
+
+@keyframes fadeInCard {
+  0% {opacity: 0; transform: translateY(50px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive tweaks */
+@media(max-width: 768px){
+  header h1 {font-size: 2.2rem;}
+  header p {font-size: 1rem;}
+}
+
+
+
+
+
+
+
+/* =========================
+   Root & Smooth Scroll
+========================= */
+:root {
+  --navbar-height: 70px; 
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  padding-top: var(--navbar-height);
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* =========================
+   Navbar
+========================= */
+.mynav {
+  background-image: url("https://th.bing.com/th/id/OIP.G0M-ojEeyEwbNe6A03GMnwHaEo?w=2560&h=1600&rs=1&pid=ImgDetMain");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar { animation: navbarFadeIn 1s ease forwards; }
+
+@keyframes navbarFadeIn {
+  0% { opacity: 0; transform: translateY(-30px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1E40AF !important;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.navbar-brand:hover {
+  color: #5b8bce !important;
+  text-shadow: 0 0 12px #1E40AF;
+  transform: scale(1.08) translateY(-3px);
+}
+
+.navbar-brand img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: transform 0.4s ease;
+}
+
+.navbar-brand img:hover { transform: scale(1.1) rotate(5deg); }
+
+.navbar .nav-link {
+  position: relative;
+  font-weight: 600;
+  color: #1E40AF !important;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #cad808;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after { width: 100%; }
+
+.navbar .nav-link:hover {
+  transform: scale(1.05) translateY(-2px);
+  color: #5b8bce !important;
+}
+
+/* Dropdown fade */
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+  margin-top: 0.5rem;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center/cover;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero h1 span, .hero p { animation: glow 2s ease-in-out infinite alternate; }
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #1E40AF, 0 0 20px #1E40AF; }
+  to { text-shadow: 0 0 20px #64748B, 0 0 30px #64748B; }
+}
+
+/* =========================
+   Project Cards
+========================= */
+.project-card .card {
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.project-card .card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* Card Images special background */
+.bloktopia-img { background: #000; padding: 20px; }
+.noon-img { background: #fcd900; padding: 20px; }
+
+.card-title { font-weight: 700; color: #007bff; }
+.card-text { color: #555; }
+
+.btn-primary {
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  border-color: transparent;
+  color: #fff;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  background: linear-gradient(135deg, #1E3A8A, #2563EB);
+  color: #f0f0f0;
+  padding: 60px 0 30px 0;
+  font-size: 0.9rem;
+}
+
+footer h4, footer h5 { color: #fff; }
+
+footer p, footer a { color: #d1d5db; transition: all 0.3s ease; }
+footer a:hover { color: #fcd34d; transform: scale(1.05); text-decoration: none; }
+
+footer hr { border-color: rgba(255,255,255,0.2); }
+
+footer .social-icons a {
+  margin-right: 15px;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  transform: scale(1.2);
+  color: #fcd34d;
 }
